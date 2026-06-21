@@ -2,28 +2,35 @@
 
 Status: active
 
-En fristående HTML-sida som återskapar ett Flashback-trådinlägg om
-**Pi-dagen** — med kodrutor som visar olika sätt att hantera lång,
-horisontellt rinnande kod.
+En statisk sida som återskapar Flashback-inlägget **"Pi-dagen idag!"**
+(sp95149773) — med en växlare mellan mobil-/datorwebb och flera exempel på
+hur kodrutor hanterar lång, horisontellt rinnande kod.
 
 ## Features
 
-- **Flashback-look** — rubrik, citatrutor, signatur och inläggsmeta i forumstil.
-- **Horisontell scroll i kodrutor** — kodblocken visas i tre lägen via
-  `data-mode` på inläggswrappern: `wrap` (mjuk radbrytning), `overflow`
-  (hård brytning på tecken) och `native` (horisontell scroll).
-- **Helt fristående** — `index.html` packar upp sina egna inbäddade,
-  komprimerade resurser i webbläsaren. Inga externa beroenden, inget byggsteg.
+- **Flashback-look** i både mobil- och datorvy, med växlare i en kontrollrad.
+- **Kodrute-lägen** styrda av `data-mode` på inläggswrappern:
+  - Mobil: `wrap` (radbrytning), `hscroll` (horisontell scroll),
+    `hvscroll` (+ vertikal scroll vid ≥30 rader).
+  - Dator: `native` (allt ryms), `overflow` (medvetet trasig),
+    `drag` (horisontell scroll med grab-and-drag).
+
+## Files
+
+- `index.html` — hela designen (markup + logik). Entry point.
+- `support.js` — runtime som `index.html` laddar via `<script src>`. Krävs.
+- `assets/avatar-thecrash.jpg` — avatar.
 
 ## Getting started
 
+Servera mappen statiskt (relativa sökvägar till `support.js` och `assets/`):
+
 ```sh
-git clone https://github.com/GeGGe01/horisontell-scroll-flashback.git
-cd horisontell-scroll-flashback
-xdg-open index.html        # eller: python3 -m http.server 8000
+npx serve .        # öppna sedan /index.html
 ```
 
-JavaScript måste vara aktiverat — sidan bygger upp sitt innehåll vid inläsning.
+`support.js` hämtar React + Babel från unpkg vid inläsning, så en
+nätverksanslutning krävs första gången.
 
 ## License
 
