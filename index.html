@@ -30,7 +30,7 @@
   [data-mode="hvscroll"] [data-code]{white-space:pre;overflow:auto;max-height:625px;-webkit-overflow-scrolling:touch;}
   [data-mode="drag"] [data-code]{white-space:pre;overflow-x:auto;overflow-y:hidden;cursor:grab;user-select:text;}
   [data-mode="drag"] [data-code].is-dragging{cursor:grabbing;}
-  [data-device="desktop"] [data-code]{font-size:13px;}
+  [data-device="desktop"] [data-code]{font-size:12px;}
 </style>
 </helmet>
 <div data-device="{{ device }}" style="min-height:100vh;display:flex;flex-direction:column;font-family:-apple-system,'Roboto','Segoe UI',Helvetica,Arial,sans-serif;color:#1a1a1a;">
@@ -56,7 +56,7 @@
   </div>
 
   <!-- ===== Stage ===== -->
-  <div style="flex:1;display:flex;justify-content:center;align-items:flex-start;padding:28px 24px 60px;">
+  <div style="flex:1;display:flex;justify-content:center;align-items:flex-start;padding:28px 24px 60px;overflow-x:auto;">
 
     <!-- ---------- MOBILE ---------- -->
     <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ true }}">
@@ -125,7 +125,7 @@
 
     <!-- ---------- DESKTOP ---------- -->
     <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
-      <div style="flex:none;width:1280px;max-width:100%;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,0.22);border:1px solid #c9c7c1;">
+      <div style="flex:none;width:1010px;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 18px 50px rgba(0,0,0,0.22);border:1px solid #c9c7c1;">
         <!-- browser chrome -->
         <div style="display:flex;align-items:center;gap:9px;padding:9px 14px;background:#ecebe8;border-bottom:1px solid #d4d2cc;">
           <span style="width:11px;height:11px;border-radius:50%;background:#ed6a5e;"></span>
@@ -147,7 +147,7 @@
 
           <div style="display:flex;align-items:flex-start;gap:18px;padding:16px 18px 8px;">
             <!-- sidebar -->
-            <div style="flex:none;width:150px;">
+            <div style="flex:none;width:140px;">
               <div style="font-size:15px;font-weight:700;color:#1c3f73;text-decoration:underline;line-height:1.2;">The Crash</div>
               <div style="font-size:13px;color:#555;margin:3px 0 9px;display:flex;align-items:center;gap:6px;">Tvångskonsult<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#cc1f1f;"></span></div>
               <img src="assets/avatar-thecrash.jpg" alt="The Crash" style="width:108px;height:108px;border:1px solid #c4c4c4;border-radius:2px;object-fit:cover;display:block;" />
