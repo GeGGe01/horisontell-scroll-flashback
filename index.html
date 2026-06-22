@@ -237,6 +237,48 @@ const CODE1 = `Svensk standard  | Tid              | Detaljer (Kalender [Format]
 3669-05-25       | Kl. 02:06:53,589 | Islamisk     [ÅÅÅÅ-MM-DD] -> År 3141, Månad 5, Dag 9
 3669-09-16       | Kl. 02:06:53,589 | Islamisk     [ÅÅÅÅ-DD-MM] -> År 3141, Dag 5, Månad 9`;
 
+const CODE1_WIDE = `Svensk standard  | Tid              | Detaljer (Kalender [Format] -> Beskrivning) | Veckodag | UTC    | Referens         | Status
+-----------------|------------------|---------------------------------------------|----------|--------|------------------|--------
+6859 f.Kr.-05-09 | Kl. 02:06:53,589 | Holocen (HE) [ÅÅÅÅ-MM-DD] -> År 16859, Månad 5, Dag 9 | Onsdag   | +02:00 | FB-sp95149773-002 | Ej granskad
+6859 f.Kr.-09-05 | Kl. 02:06:53,589 | Holocen (HE) [ÅÅÅÅ-DD-MM] -> År 16859, Dag 5, Månad 9 | Torsdag  | +05:30 | FB-sp95149773-003 | Verifierad
+1640 f.Kr.-09-09 | Kl. 06:53:58,900 | Maya (Långa) [B.K.T.U.K]   -> 3.14.15.9.2 | Fredag   | -05:00 | FB-sp95149773-004 | Preliminär
+0621 f.Kr.-10-24 | Kl. 02:06:53,589 | Judisk (AM)  [ÅÅÅÅ-MM-DD] -> År 3141, Månad 5, Dag 9 | Lördag   | +08:00 | FB-sp95149773-005 | Ej granskad
+0314 f.Kr.-01-05 | Kl. 09:26:53,589 | Juliansk     [ÅÅÅÅ-MM-DD] -> År 314, Månad 1, Dag 5 | Söndag   | +09:00 | FB-sp95149773-006 | Verifierad
+0314 f.Kr.-09-15 | Kl. 02:06:53,589 | Juliansk     [ÅÅÅÅ-DD-MM] -> År 314, Dag 15, Månad 9 | Måndag   | -03:00 | FB-sp95149773-007 | Preliminär
+0031 f.Kr.-04-15 | Kl. 09:26:53,589 | Juliansk     [ÅÅÅÅ-MM-DD] -> År 31, Månad 4, Dag 15 | Tisdag   | +00:00 | FB-sp95149773-008 | Ej granskad
+0031-04-15       | Kl. 09:26:53,589 | Juliansk     [ÅÅÅÅ-MM-DD] -> År 31, Månad 4, Dag 15 | Onsdag   | +01:00 | FB-sp95149773-009 | Verifierad
+0314-01-05       | Kl. 09:26:53,589 | Juliansk     [ÅÅÅÅ-MM-DD] -> År 314, Månad 1, Dag 5 | Torsdag  | +02:00 | FB-sp95149773-010 | Preliminär
+0314-09-15       | Kl. 02:06:53,589 | Juliansk     [ÅÅÅÅ-DD-MM] -> År 314, Dag 15, Månad 9 | Fredag   | +05:30 | FB-sp95149773-011 | Ej granskad
+1372-03-14       | Kl. 09:26:53,589 | Thailändsk   [MM-DD-ÅÅ]   -> Månad 3, Dag 14, År '15 (1915 BE) | Lördag   | -05:00 | FB-sp95149773-012 | Verifierad
+1415-03-14       | Kl. 09:26:53,589 | Juliansk     [MM-DD-ÅÅ]   -> Månad 3, Dag 14, År '15 (1415 AD) | Söndag   | +08:00 | FB-sp95149773-013 | Preliminär
+1472-03-14       | Kl. 09:26:53,589 | Thailändsk   [MM-DD-ÅÅ]   -> Månad 3, Dag 14, År '15 (2015 BE) | Måndag   | +09:00 | FB-sp95149773-014 | Ej granskad
+1515-03-14       | Kl. 09:26:53,589 | Juliansk     [MM-DD-ÅÅ]   -> Månad 3, Dag 14, År '15 (1515 AD) | Tisdag   | -03:00 | FB-sp95149773-015 | Verifierad
+1572-03-14       | Kl. 09:26:53,589 | Thailändsk   [MM-DD-ÅÅ]   -> Månad 3, Dag 14, År '15 (2115 BE) | Onsdag   | +00:00 | FB-sp95149773-016 | Preliminär
+1592-03-14       | Kl. 06:53:58,900 | Juliansk     [MM-DD-ÅÅ]   -> Månad 3, Dag 14, År '15 (1592 AD) | Torsdag  | +01:00 | FB-sp95149773-017 | Ej granskad
+1615-03-14       | Kl. 09:26:53,589 | Gregoriansk  [MM-DD-ÅÅ]   -> Månad 3, Dag 14, År '15 (1615 AD) | Fredag   | +02:00 | FB-sp95149773-018 | Verifierad
+1672-03-14       | Kl. 09:26:53,589 | Thailändsk   [MM-DD-ÅÅ]   -> Månad 3, Dag 14, År '15 (2215 BE) | Lördag   | +05:30 | FB-sp95149773-019 | Preliminär
+1715-03-14       | Kl. 09:26:53,589 | Gregoriansk  [MM-DD-ÅÅ]   -> Månad 3, Dag 14, År '15 (1715 AD) | Söndag   | -05:00 | FB-sp95149773-020 | Ej granskad
+1772-03-14       | Kl. 09:26:53,589 | Thailändsk   [MM-DD-ÅÅ]   -> Månad 3, Dag 14, År '15 (2315 BE) | Måndag   | +08:00 | FB-sp95149773-021 | Verifierad
+1806-12-05       | Kl. 09:26:53,589 | Fransk Rev.  [MM-DD-ÅÅ]   -> Månad 3, Dag 14, År '15 (XIV RF) | Tisdag   | +09:00 | FB-sp95149773-022 | Preliminär
+1815-03-14       | Kl. 09:26:53,589 | Gregoriansk  [MM-DD-ÅÅ]   -> Månad 3, Dag 14, År '15 (1815 AD) | Onsdag   | -03:00 | FB-sp95149773-023 | Ej granskad
+1872-03-14       | Kl. 09:26:53,589 | Thailändsk   [MM-DD-ÅÅ]   -> Månad 3, Dag 14, År '15 (2415 BE) | Torsdag  | +00:00 | FB-sp95149773-024 | Verifierad
+1878-04-16       | Kl. 09:26:53,589 | Kinesisk     [MM-DD-ÅÅ]   -> Månad 3, Dag 14, Cykelår 15 | Fredag   | +01:00 | FB-sp95149773-025 | Preliminär
+1897-08-13       | Kl. 09:26:53,589 | Islamisk     [MM-DD-ÅÅ]   -> Månad 3, Dag 14, År '15 (1315 AH) | Lördag   | +02:00 | FB-sp95149773-026 | Ej granskad
+1915-03-14       | Kl. 09:26:53,589 | Gregoriansk  [MM-DD-ÅÅ]   -> Månad 3, Dag 14, År '15 (1915 AD) | Söndag   | +05:30 | FB-sp95149773-027 | Verifierad
+1923-03-23       | Kl. 09:26:53,589 | Etiopisk     [MM-DD-ÅÅ]   -> Månad 3, Dag 14, År '15 (1915 EE) | Måndag   | -05:00 | FB-sp95149773-028 | Preliminär
+2015-03-14       | Kl. 09:26:53,589 | Gregoriansk  [MM-DD-ÅÅ]   -> Månad 3, Dag 14, År '15 (2015 AD) | Tisdag   | +08:00 | FB-sp95149773-029 | Ej granskad
+2091-08-29       | Kl. 09:26:53,589 | Islamisk     [MM-DD-ÅÅ]   -> Månad 3, Dag 14, År '15 (1515 AH) | Onsdag   | +09:00 | FB-sp95149773-030 | Verifierad
+2115-03-14       | Kl. 09:26:53,589 | Gregoriansk  [MM-DD-ÅÅ]   -> Månad 3, Dag 14, År '15 (2115 AD) | Torsdag  | -03:00 | FB-sp95149773-031 | Preliminär
+2118-04-06       | Kl. 09:26:53,589 | Kinesisk     [MM-DD-ÅÅ]   -> Månad 3, Dag 14, Cykelår 15 | Fredag   | +00:00 | FB-sp95149773-032 | Ej granskad
+2123-03-23       | Kl. 09:26:53,589 | Etiopisk     [MM-DD-ÅÅ]   -> Månad 3, Dag 14, År '15 (2115 EE) | Lördag   | +01:00 | FB-sp95149773-033 | Verifierad
+2136-06-04       | Kl. 09:26:53,589 | Persisk      [MM-DD-ÅÅ]   -> Månad 3, Dag 14, År '15 (1515 SH) | Söndag   | +02:00 | FB-sp95149773-034 | Preliminär
+2172-03-14       | Kl. 09:26:53,589 | Thailändsk   [MM-DD-ÅÅ]   -> Månad 3, Dag 14, År '15 (2715 BE) | Måndag   | +05:30 | FB-sp95149773-035 | Ej granskad
+2215-03-14       | Kl. 09:26:53,589 | Gregoriansk  [MM-DD-ÅÅ]   -> Månad 3, Dag 14, År '15 (2215 AD) | Tisdag   | -05:00 | FB-sp95149773-036 | Verifierad
+3141-05-09       | Kl. 02:06:53,589 | Gregoriansk  [ÅÅÅÅ-MM-DD] -> År 3141, Månad 5, Dag 9 | Onsdag   | +08:00 | FB-sp95149773-037 | Preliminär
+3141-09-05       | Kl. 02:06:53,589 | Gregoriansk  [ÅÅÅÅ-DD-MM] -> År 3141, Dag 5, Månad 9 | Torsdag  | +09:00 | FB-sp95149773-038 | Ej granskad
+3669-05-25       | Kl. 02:06:53,589 | Islamisk     [ÅÅÅÅ-MM-DD] -> År 3141, Månad 5, Dag 9 | Fredag   | -03:00 | FB-sp95149773-039 | Verifierad
+3669-09-16       | Kl. 02:06:53,589 | Islamisk     [ÅÅÅÅ-DD-MM] -> År 3141, Dag 5, Månad 9 | Lördag   | +00:00 | FB-sp95149773-040 | Preliminär`;
+
 const CODE2 = `Standardkalendrar (Gregoriansk/Juliansk)
 - 14 mars vart hundrade år (t.ex. 1915, 2015, 2115) -> [Månad 3 / Dag 14 / År 15]
 - 15 april år 31 f.Kr. & e.Kr. -> [År 31 / Månad 4 / Dag 15]
@@ -344,7 +386,7 @@ class Component extends DCLogic {
       isMobile: device === 'mobile',
       isDesktop: device === 'desktop',
       tabs, devices, caption,
-      code1: CODE1, code2: CODE2,
+      code1: (mode === 'overflow' || mode === 'drag') ? CODE1_WIDE : CODE1, code2: CODE2,
       onCodeDown: this.onCodeDown,
       showHint: device === 'mobile' && (mode === 'hscroll' || mode === 'hvscroll'),
     };
